@@ -1,0 +1,16 @@
+[ignore]
+.*/node_modules/.*
+.*/dist/.*
+.*/test/coverage/.*
+
+[include]
+src/*.js
+src/*.jsx
+test/*.js
+test/*.jsx
+
+[libs]
+src/types
+
+[options]
+all=true
