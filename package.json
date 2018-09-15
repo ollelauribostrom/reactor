@@ -54,7 +54,7 @@
     "test:all": "yarn test && yarn lint && yarn flow",
     "coverage": "jest --coverage",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
-    "lint": "eslint src test --ignore-pattern test/coverage*",
+    "lint": "eslint src test",
     "flow": "flow"
   },
   "engines": {
