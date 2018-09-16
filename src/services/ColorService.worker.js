@@ -10,7 +10,9 @@ self.onmessage = (e: { data: WorkerRequest }) => {
   const fn = {
     [WorkerCommands.GetRandomColor]: getRandomColor
   }[e.data.command];
-  fn(e.data);
+  if (fn) {
+    fn(e.data);
+  }
 };
 
 function getRandomColor(request: WorkerRequest): void {

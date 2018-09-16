@@ -61,6 +61,7 @@
     "node": ">=10.0.0"
   },
   "jest": {
+    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
     "setupFiles": [
       "<rootDir>/test/test-setup.js"
     ],
@@ -68,6 +69,9 @@
       "<rootDir>/src/**/*.{js,jsx}",
       "!<rootDir>/src/types/**/*.js"
     ],
-    "coverageDirectory": "<rootDir>/test/coverage"
+    "coverageDirectory": "<rootDir>/test/coverage",
+    "moduleNameMapper": {
+      "\\.(css)$": "<rootDir>/test/test-mock.js"
+    }
   }
 }
