@@ -49,11 +49,11 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production --env prod",
+    "build": "webpack --mode production --env /reactor/",
     "test": "jest",
     "test:all": "yarn test && yarn lint && yarn flow",
     "coverage": "jest --coverage",
-    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "coveralls": "jest --coverage && cat ./test/coverage/lcov.info | coveralls",
     "lint": "eslint src test",
     "flow": "flow"
   },

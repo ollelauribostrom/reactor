@@ -3,7 +3,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-module.exports = {
+module.exports = publicPath => ({
   entry: {
     main: './src/index.jsx'
   },
@@ -11,7 +11,7 @@ module.exports = {
     filename: '[name].bundle.js',
     chunkFilename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist/'),
-    publicPath: '/'
+    publicPath: publicPath || '/'
   },
   devtool: 'source-map',
   resolve: {
@@ -24,7 +24,7 @@ module.exports = {
         test: /\.worker\.js$/,
         use: {
           loader: 'worker-loader',
-          options: { name: '[name].js' }
+          options: { name: '[name].js', publicPath: publicPath || '/' }
         }
       },
       // Process JS with Babel.
@@ -52,8 +52,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: './public/index.html',
       favicon: './public/favicon.ico',
-      filename: './index.html',
-      title: 'Reactor'
+      filename: 'index.html'
     }),
     new CopyWebpackPlugin([{ from: './public/manifest.json' }])
   ],
@@ -65,4 +64,4 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
     port: 3000
   }
-};
+});
