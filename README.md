@@ -1,29 +1,35 @@
 # Reactor 🚀
 
-Just another React boilerplate
+Just another React boilerplate.
 
-## WHATS INCLUDED
+> LIVE EXAMPLE: https://ollelauribostrom.github.io/reactor/
+
+## What's included?
 
 - React 16 (Obviously)
-- react-waterfall (For state management)
-- Eslint (airbnb style)
-- Prettier
-- Flow
-- Jest
-- Enzyme
-- Webpack
-- Travis CI and Coveralls integration
-- VSCode settings for Chrome Debugging/Prettier etc
+- [Flow](https://flow.org/en/)
+- [react-waterfall](https://github.com/didierfranc/react-waterfall) (React store built on top of the new context API)
+- [Jest](https://jestjs.io/)
+- [Enzyme](https://github.com/airbnb/enzyme)
+- [ESLint](https://github.com/eslint/eslint) (Airbnb config)
+- [Prettier](https://prettier.io/)
+- [Webpack 4](https://webpack.github.io/)
+- Web Worker support
+- Travis CI integration
+- Coveralls integration
+- Publishing to GitHub pages
+- Some VSCode settings for Chrome Debugging and Prettier
 
-## GET IT
+## Use it as a boilerplate
 
 ```
 git clone <url> .
 rm -rf ./git
 git init
+yarn
 ```
 
-## USE IT
+## Commands
 
 ```sh
 yarn start
@@ -33,3 +39,15 @@ yarn coverage
 yarn lint
 yarn flow
 ```
+
+## Credits
+
+Icon: nuclear plant by emilegraphics from the Noun Project
+
+## Contributing
+
+All contributions are very much welcome. Send me a PR or [open an issue](https://github.com/ollelauribostrom/reactor/issues/new).
+
+## License
+
+MIT
