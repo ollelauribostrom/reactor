@@ -23,7 +23,7 @@ Just another React boilerplate.
 ## Use it as a boilerplate
 
 ```
-git clone <url> .
+git clone https://github.com/ollelauribostrom/reactor.git .
 rm -rf ./git
 git init
 yarn
